@@ -1,0 +1,161 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        span{
+            font-size: 24px;
+        }
+    </style>
+</head>
+
+<body>
+    <input type="text" id="v1">
+    <input type="text" id='v2'>
+    <input type="button" id="btn" value="提交">
+    <input type="button" id="zc" value="注册">
+    <input type="button" id="login" value="登录">
+    <input type="button" id="delete" value="删除">
+    <span>-</span> <input type="text" id="num" value="0"> <span>+</span>
+
+</body>
+<script src="http://www.jq22.com/jquery/jquery-3.3.1.js"></script>
+<script>
+    var btn = document.getElementById('btn');
+
+    btn.onclick = function () {
+        data = "name=" + $('#v1').val() + "&pwd=" + $('#v2').val() + "&type=select";
+
+        $.ajax({
+            type: "POST",
+            url: "ind.php",
+            data: data,
+            success: function (str) {
+                $data = JSON.parse(str);
+                console.log($data);
+            }
+        });
+    }
+
+    $("span").first().click(function () {
+        var num = ($("#num").val()) * 1 - 1;
+        if (num > 0) {
+
+            $("#num").val(num);
+
+            // update 更新数据 num
+            data = "type=update&why=id=1&name=num&num=" + num;
+            $.ajax({
+                type: "post",
+                url: "ind.php",
+                data: data,
+                success: function (str) {
+                    console.log(str);
+                }
+
+            });
+
+        } else {
+            num = 0;
+            $("#num").val(num);
+        }
+    });
+
+
+    $("span").eq('1').click(function () {
+        var num = ($("#num").val()) * 1 + 1;
+        if (num > 0) {
+            $("#num").val(num);
+            // update 更新数据 num
+            data = "type=update&why=id=1&name=num&num=" + num;
+            $.ajax({
+                type: "post",
+                url: "ind.php",
+                data: data,
+                success: function (str) {
+                    console.log(str);
+                }
+
+            });
+        } else {
+            num = 0;
+            $("#num").val(num);
+        }
+    });
+
+    $("#zc").click(function () {
+        data = "name=" + $('#v1').val() + "&pwd=" + $('#v2').val() + "&type=resevg";
+        $.ajax({
+            type: "post",
+            url: "ind.php",
+            data: data,
+            success: function (str) {
+                console.log(str);
+            }
+        });
+    });
+
+
+    // 删除
+    $('#delete').click(function () {
+        var data = "type=delete&why=id=51";
+        $.ajax({
+            type: "post",
+            url: "ind.php",
+            data: data,
+            success: function (str) {
+                console.log(str);
+            }
+        });
+    })
+
+    // // 登录
+    // $('#login').click(function () {
+
+    //     var data = "type=login&why=id=51";
+    //     data = "name=" + $('#v1').val() + "&pwd=" + $('#v2').val() + "&type=login";
+    //     $.ajax({
+    //         type: "post",
+    //         url: "ind.php",
+    //         data: data,
+    //         success: function (str) {
+    //             console.log(str);
+    //         }
+    //     });
+    // })
+
+
+    //数据渲染
+    $('#login').click(function () {
+
+        $zdname = 'id'; //排序字段名
+        $setup = 'asc'; //排序方法
+
+        $.ajax({
+            type: "post",
+            url: "ind.php",
+            data: {
+                type: 'goodslist',
+                page: 1,
+                qty: 5,
+                zdname: $zdname,
+                setup: $setup
+            },
+            success: function (str) {
+                var strs = JSON.parse(str);
+                console.log(strs);
+            }
+        });
+    })
+
+
+
+
+
+</script>
+
+</html>

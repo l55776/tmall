@@ -1,0 +1,264 @@
+@charset "UTF-8";
+.login-header {
+    width: 100%;
+    height: 88px;
+    padding-left: 3.4%;
+    a {
+        display: inline-block;
+        width: 190px;
+        height: 88px;
+        h1 {
+            width: 190px;
+            background: url("../img/loginimg/TB1_Gn8RXXXXXXqaFXXXXXXXXXX-380-54.png")no-repeat;
+            background-size: 190px;
+            background-position: 3.4% 30px;
+            height: 88px;
+            text-indent: -9999px;
+        }
+    }
+}
+
+.login-center {
+    width: 100%;
+    height: 600px;
+    background-color: rgb(255, 153, 156);
+    padding: 0 3%;
+    .bjt {
+        width: 100%;
+        height: 600px;
+        background: url('../img/loginimg/TB1819lDgTqK1RjSZPhSutfOFXa.jpg')no-repeat;
+        position: relative;
+        .bjt-a {
+            display: inline-block;
+            width: 670px;
+            height: 500px;
+            background: #6c6c6c;
+            position: absolute;
+            top: 50px;
+            left: 40px;
+            opacity: 0;
+        } // 密码登录
+        .login-login {
+            width: 350px;
+            height: 400px;
+            background: #fff;
+            position: absolute;
+            top: 90px;
+            right: 60px;
+            display: block;
+            .tisi {
+                display: inline-block;
+                border: 1px solid #f3d995;
+                color: #df9c1f;
+                height: 16px;
+                line-height: 16px;
+                padding: 5px 20px 5px 15px;
+                background: #fefcee;
+                position: relative;
+                width: 143px;
+                height: 28px;
+                left: 145px;
+                top: 10px;
+                &::after {
+                    display: inline-block;
+                    content: "";
+                    border: 8px solid;
+                    border-color: transparent transparent transparent #f3d995;
+                    position: absolute;
+                    right: -16px;
+                    top: 5px;
+                }
+            } //i
+            .shaoma {
+                display: block;
+                font-size: 52px;
+                color: #ff0036;
+                position: absolute;
+                top: 10px;
+                right: 5px;
+                z-index: 4;
+            }
+            .loginform {
+                padding: 25px;
+                position: absolute;
+                top: 15px;
+                overflow: hidden;
+                h3 {
+                    //密码登录
+                    font-size: 16px;
+                    font-weight: bold;
+                }
+                p {
+                    display: none;
+                    padding: 1px 5px;
+                    border: #ff0036 1px solid;
+                    background: #f5b8c5;
+                    color: #ff0036;
+                    text-align: center; // line-height: 25px;
+                    margin-top: 15px;
+                }
+                .bdtb {
+                    display: inline-block;
+                    width: 40px;
+                    height: 40px;
+                    background: #ddd;
+                    font-size: 22px;
+                    text-align: center;
+                    line-height: 40px; // float: left;
+                }
+                .icon-wodedangxuan,
+                .icon-mima {
+                    position: relative;
+                    top: 15px;
+                    z-index: 3;
+                }
+                .icon-wodedangxuan {
+                    top: 30px;
+                }
+                input {
+                    font-size: 16px;
+                    width: 300px;
+                    line-height: 18px;
+                    height: 40px;
+                    padding: 11px 8px 11px 50px;
+                    border: 1px solid #ddd; // margin-top: 20px;
+                    position: relative;
+                    top: -20px; //    float: left;
+                }
+                .zhao {
+                    top: -10px;
+                }
+                .mima {
+                    top: -25px;
+                }
+                input[type=button] {
+                    cursor: not-allowed;
+                    background: #ccc;
+                    padding: 11px 0;
+                    color: #fff;
+                    font-size: 16px;
+                    margin-top: 25px; // position: relative;
+                    // top: -20px;
+                }
+            }
+            .wangjimima {
+                text-align: right;
+                padding-right: 30px;
+                position: absolute;
+                bottom: 40px;
+                right: 0px;
+                a {
+                    color: #6c6c6c;
+                    text-align: right;
+                    margin-right: 5px;
+                }
+            }
+        } // 扫码登录
+        .login-loginsm {
+            display: none;
+            width: 350px;
+            height: 400px;
+            background: #fff;
+            position: absolute;
+            top: 90px;
+            right: 60px;
+            .shaoma {
+                display: block;
+                font-size: 52px;
+                color: #ff0036;
+                position: absolute;
+                top: 10px;
+                right: 5px;
+                z-index: 4;
+            }
+            .loginforms {
+                width: 100%;
+                padding: 25px;
+                position: absolute;
+                top: 15px; // overflow: hidden;
+                h3 {
+                    //密码登录
+                    font-size: 16px;
+                    font-weight: bold;
+                } //扫码
+                .sm {
+                    width: 100%;
+                    height: 140px;
+                    margin-top: 30px;
+                    text-align: center;
+                    position: relative;
+                    .img {
+                        width: 140px;
+                        height: 140px;
+                        position: absolute;
+                        left: 80px; // z-index: 3;
+                    }
+                    .sjimg {
+                        width: 120px;
+                        height: 180px;
+                        position: absolute;
+                        top: -25px;
+                        right: 20px;
+                        display: none;
+                    }
+                    .ewmshixiao {
+                        display: none;
+                        position: absolute;
+                        left: 105px;
+                        width: 140px;
+                        height: 140px;
+                        background: rgba(255, 255, 255, .95);
+                        padding-top: 40px;
+                        p {
+                            width: 90px;
+                            margin: 0 auto;
+                            font-size: 14px;
+                        }
+                        a {
+                            width: 90px;
+                            height: 30px;
+                            background: #ff0036;
+                            display: inline-block;
+                            line-height: 30px;
+                            color: #fff;
+                            margin-top: 15px;
+                        }
+                    }
+                }
+                .ft-gray {
+                    width: 100%;
+                    height: 36px;
+                    margin-top: 20px;
+                    text-align: center;
+                    i {
+                        font-size: 36px;
+                        color: #ff0036;
+                    }
+                    p {
+                        width: 144px;
+                        height: 36px;
+                        display: inline-block;
+                        color: #9c9c9c;
+                        text-align: left;
+                        a {
+                            color: #ff0036;
+                            margin: 0 3px;
+                        }
+                    }
+                }
+            }
+            .login-links {
+                text-align: right;
+                padding-right: 30px;
+                position: absolute;
+                bottom: 80px;
+                right: 0px;
+                a {
+                    color: #6c6c6c;
+                    text-align: right;
+                    margin-right: 5px;
+                }
+            }
+        }
+    }
+}

@@ -1,0 +1,221 @@
+@charset "utf-8";
+#order {
+    .ordercentent {
+        width: 990px;
+        height: auto;
+        margin: auto;
+        .switch-cart {
+            height: 33px;
+            ul {
+                height: 33px;
+                border-bottom: 1px solid #ccc;
+                li {
+                    float: left;
+                    border-right: 1px solid #ccc;
+                    a {
+                        padding: 10px 15px;
+                        font-size: 16px;
+                        font-style: normal;
+                        font-weight: 400;
+                        transition: all 0.5s;
+                        span {
+                            font-size: 14px;
+                            color: red;
+                            margin: 0 5px;
+                        }
+                    }
+                    .active {
+                        border-bottom: 1px solid red;
+                        color: red;
+                    }
+                }
+                .cart-r {
+                    float: right;
+                    border: none;
+                    .selectshop {
+                        float: right;
+                        width: 240px;
+                        height: 25px;
+                        line-height: 25px;
+                        span {}
+                        em {
+                            color: red;
+                            font-family: Verdana, Arial;
+                            padding-left: 2px;
+                            font-weight: 700;
+                        }
+                        p {
+                            cursor: pointer;
+                            display: inline-block;
+                            width: 55px;
+                            height: 25px;
+                            color: #fff;
+                            text-align: center;
+                            line-height: 25px;
+                            background: red;
+                        }
+                    }
+                }
+            }
+        } // 全选 单价 数量
+        .cart-th {
+            height: 50px;
+            line-height: 50px;
+            text-align: center;
+            .checkall {
+                width: 80px;
+                height: 50px;
+                float: left;
+                label {
+                    font-size: 14px;
+                }
+            }
+            .spxinxi {
+                float: left;
+                width: 80px;
+            }
+            .price {
+                width: 610px;
+                height: 100%;
+                float: right; // border: #ccc 1px solid;
+                li {
+                    width: 120px;
+                    height: 50px;
+                    float: left;
+                }
+            }
+        } // 订单信息
+        .cart-cent {
+            .cc-h {
+                height: 38px;
+                padding: 0 18px;
+                line-height: 38px;
+                span {
+                    // display: block;
+                    background: red;
+                    color: #fff;
+                    margin: 0 5px;
+                }
+                a {
+                    margin: 0 5px;
+                    &:hover {
+                        color: red;
+                    }
+                }
+                i {
+                    display: inline-block;
+                    width: 40px;
+                    height: 20px;
+                    background: url("../img/goodslist/ali.jpg")no-repeat;
+                }
+            }
+            .cc-m {
+                height: auto;
+                border: #ccc 1px solid;
+                .cc-m-hd {
+                    height: 38px;
+                    padding-left: 45px;
+                    span {
+                        padding: 6px;
+                        line-height: 38px;
+                        background: #e7e7e7;
+                    }
+                }
+                .cc-m-list {
+                    ul {
+                        width: 100%;
+                        height: 130px;
+                        background: #fcfcfc;
+                        border-bottom: 1px solid #e7e7e7;
+                        li {
+                            height: 100%;
+                            float: left;
+                            padding-top: 20px;
+                        }
+                        .li-chk {
+                            width: 45px;
+                            padding-left: 20px;
+                        }
+                        .li-inner {
+                            width: 302px;
+                            position: relative;
+                            >a {
+                                width: 186px;
+                                height: 36px;
+                                display: inline-block;
+                                position: absolute;
+                                top: 20px;
+                                right: 20px;
+                            }
+                            .sp-logo {
+                                display: inline-block;
+                                width: 186px;
+                                height: 26px;
+                                position: absolute; // top: 20px;
+                                right: 20px;
+                                top: 60px;
+                            }
+                            .item-icons {
+                                display: inline-block;
+                                width: 186px;
+                                height: 23px;
+                                position: absolute; // top: 20px;
+                                right: 20px;
+                                top: 80px;
+                            }
+                        }
+                        .li-props {
+                            width: 172px;
+                        } // 单价
+                        .li-price {
+                            padding-left: 15px;
+                            width: 120px;
+                        } // 数量
+                        .li-amount {
+                            width: 120px;
+                            .numb {
+                                width: 80px;
+                                height: 25px;
+                                background: #ccc;
+                                a {
+                                    width: 16px;
+                                    display: inline-block;
+                                    height: 25px;
+                                    text-align: center;
+                                }
+                                input {
+                                    width: 40px;
+                                    height: 25px;
+                                    border: 1px solid rgb(161, 161, 161);
+                                    outline: none;
+                                    text-align: center;
+                                }
+                            }
+                        } // 总计
+                        .li-sum {
+                            width: 105px;
+                            padding-right: 20px;
+                            text-align: center;
+                            em {
+                                color: red;
+                                display: block;
+                                font-size: 14px;
+                            }
+                            span {
+                                color: #ccc;
+                            }
+                        }
+                        .li-op {
+                            width: 99px;
+                            a {
+                                width: 100%;
+                                display: inline-block;
+                                padding-bottom: 10px;
+                            }
+                        }
+                    }
+                }
+            }
+        }
+    }
+}
